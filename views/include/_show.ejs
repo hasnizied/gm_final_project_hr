@@ -1,0 +1,30 @@
+
+
+
+
+<% for(var i = 0; i < Employees.length; i++) { %>
+    <tr>
+        <td><%= Employees[i].EmployeeNumber %></td>
+        <td><%= Employees[i].EmployeeName %></td>
+        <td><%= Employees[i].Cost_Center %></td>
+        <td><%= Employees[i].Speciality %></td>
+        <td><%= Employees[i].Nationality %></td>
+        <td><%= Employees[i].email %></td>
+        <td><%= Employees[i].gender %></td>
+        <td><%= Employees[i].status %></td>
+        <td>
+            
+            <a class="btn border-shadow delete" data-id=<%= Employees[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    
+    
+        <td>
+            <a href="/update-Employee?id=<%= Employees[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            
+        </td>
+    </tr>
+    <% } %>
